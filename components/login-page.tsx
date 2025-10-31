@@ -40,7 +40,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
         user123: "user",
       }
       localStorage.setItem("passwords", JSON.stringify(defaultPasswords))
-      setError("Default passwords initialized.")
+      setError("Default passwords initialized. Try: admin123 (admin) or user123 (user)")
     }
   }
 
@@ -48,7 +48,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center p-4">
       <Card className="w-full max-w-md bg-slate-800 border-slate-700">
         <div className="p-8">
-          <h1 className="text-3xl font-bold text-white mb-2 text-center">JiGs Lager und Logistik</h1>
+          <h1 className="text-3xl font-bold text-white mb-2 text-center">Burger Warehouse</h1>
           <p className="text-slate-400 text-center mb-8">Inventory Management System</p>
 
           <div className="space-y-4">
@@ -78,9 +78,16 @@ export function LoginPage({ onLogin }: LoginPageProps) {
               Login
             </Button>
 
+            <Button
+              onClick={initializeDefaults}
+              variant="outline"
+              className="w-full border-slate-600 text-slate-300 hover:bg-slate-700 bg-transparent"
+            >
+              Initialize Demo Passwords
+            </Button>
           </div>
 
-          <p className="text-xs text-slate-400 text-center mt-6">Created by <a href="https://github.com/a-BertsQ" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">BertsQ</a></p>
+          <p className="text-xs text-slate-400 text-center mt-6">Demo: admin123 (Admin) • user123 (User)</p>
         </div>
       </Card>
     </div>
