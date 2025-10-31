@@ -40,7 +40,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
         user123: "user",
       }
       localStorage.setItem("passwords", JSON.stringify(defaultPasswords))
-      setError("Default passwords initialized. Try: admin123 (admin) or user123 (user)")
+      setError("Default passwords initialized.")
     }
   }
 
